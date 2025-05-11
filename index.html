@@ -2,17 +2,17 @@
 <html lang="ja">
 <head>
     <meta charset="UTF-8">
-    <title>Redirecting...</title>
+    <title>Redirecting</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     
-    <!-- PWA対応 -->
+    <!-- PWA -->
     <link rel="manifest" href="manifest.json">
     <meta name="theme-color" content="#ffffff">
     <meta name="mobile-web-app-capable" content="yes">
     <meta name="apple-mobile-web-app-capable" content="yes">
     
     <script>
-        // リダイレクトONのときだけジャンプ
+        // Redirect ON ⇒ Redirect
         const redirectOn = localStorage.getItem("redirect_enabled") === "true";
         if (redirectOn) {
             location.href = "https://twitter.com/i/lists/1921174412621181026";
@@ -20,8 +20,8 @@
     </script>
 </head>
 <body>
-    <h1>リダイレクト機能</h1>
-    <button onclick="toggleRedirect()">リダイレクト: <span id="status">OFF</span></button>
+    <h1>Redirect</h1>
+    <button onclick="toggleRedirect()">Redirect: <span id="status">OFF</span></button>
 
     <script>
         const status = document.getElementById("status");
