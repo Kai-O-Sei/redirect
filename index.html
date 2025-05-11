@@ -1,10 +1,35 @@
 <!DOCTYPE html>
-<html>
-  <head>
-    <meta http-equiv="refresh" content="0; url=https://twitter.com/i/lists/1921174412621181026" />
-    <title>Redirect</title>
-  </head>
-  <body>
-    <p><a href="https://twitter.com/i/lists/1921174412621181026">Redirect</a></p>
-  </body>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <title>Redirect</title>
+  <script>
+    const redirectUrl = "https://twitter.com/i/lists/1921174412621181026";
+
+    window.onload = function () {
+      const status = localStorage.getItem("redirectEnabled");
+
+      if (status === "true") {
+        // 有効ならリダイレクト
+        window.location.href = redirectUrl;
+      }
+
+      // トグルスイッチを表示
+      document.getElementById("toggle").checked = status === "true";
+    };
+
+    function toggleRedirect(checkbox) {
+      const enabled = checkbox.checked;
+      localStorage.setItem("redirectEnabled", enabled);
+      alert("Redirect" + (enabled ? "有効" : "無効")");
+    }
+  </script>
+</head>
+<body>
+  <h2>Redirect</h2>
+  <label>
+    <input type="checkbox" id="toggle" onchange="toggleRedirect(this)">
+    リダイレクトを有効にする
+  </label>
+</body>
 </html>
