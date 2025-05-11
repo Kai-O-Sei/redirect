@@ -1,6 +1,6 @@
 {
-  "name": "Redirect Page",
-  "short_name": "Redirect",
+  "name": "Twitter",
+  "short_name": "Twitter",
   "start_url": "./index.html",
   "display": "standalone",
   "background_color": "#ffffff",
